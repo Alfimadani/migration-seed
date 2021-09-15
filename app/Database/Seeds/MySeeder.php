@@ -8,8 +8,10 @@ class MySeeder extends Seeder
 {
     public function run()
     {
+        $faker = \Faker\Factory::create();
+
         $data = [
-            'nama' => 'darth',
+            'nama' => $faker->name(),
         ];
         // Using Query Builder
         $this->db->table('user')->insert($data);
