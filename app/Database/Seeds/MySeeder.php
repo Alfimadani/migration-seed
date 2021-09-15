@@ -8,6 +8,10 @@ class MySeeder extends Seeder
 {
     public function run()
     {
-        //
+        $data = [
+            'nama' => 'darth',
+        ];
+        // Using Query Builder
+        $this->db->table('user')->insert($data);
     }
 }
