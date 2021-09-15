@@ -9,27 +9,28 @@ class MyMigration extends Migration
     public function up()
     {
         $this->forge->addField([
-            'blog_id'          => [
+            'id'          => [
                 'type'           => 'INT',
-                'constraint'     => 5,
+                'constraint'     => 33,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'blog_title'       => [
-                'type'       => 'VARCHAR',
-                'constraint' => '100',
+            'user_id'       => [
+                'type'       => 'INT',
+                'unsigned' => true,
+                'constraint' => '33',
             ],
-            'blog_description' => [
-                'type' => 'TEXT',
-                'null' => true,
+            'forum'       => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255'
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('blog');
+        $this->forge->createTable('forum');
     }
 
     public function down()
     {
-        $this->forge->dropTable('blog');
+        $this->forge->dropTable('forum');
     }
 }
