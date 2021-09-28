@@ -27,11 +27,11 @@ class StdCourse extends Migration
             ],
         ]);
         $this->forge->addKey('stdnt_course_id', true);
-        $this->forge->createTable('course_name');
+        $this->forge->createTable('stdnt_course');
     }
 
     public function down()
     {
-        $this->forge->dropTable('course_name');
+        $this->forge->dropTable('stdnt_course');
     }
 }
