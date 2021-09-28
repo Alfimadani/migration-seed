@@ -15,7 +15,7 @@ class Student extends Seeder
                 'email'    => $faker->email()
             ];
             // Using Query Builder
-            $this->db->table('users')->insert($data);
+            $this->db->table('student')->insert($data);
         }
     }
 }
