@@ -9,27 +9,27 @@ class User extends Migration
     public function up()
     {
         $this->forge->addField([
-            'blog_id'          => [
+            'student_id'          => [
                 'type'           => 'INT',
-                'constraint'     => 5,
+                'constraint'     => 15,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'blog_title'       => [
+            'name'       => [
                 'type'       => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
             ],
-            'blog_description' => [
-                'type' => 'TEXT',
-                'null' => true,
+            'email' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
             ],
         ]);
-        $this->forge->addKey('blog_id', true);
-        $this->forge->createTable('blog');
+        $this->forge->addKey('student_id', true);
+        $this->forge->createTable('student');
     }
 
     public function down()
     {
-        $this->forge->dropTable('blog');
+        $this->forge->dropTable('student');
     }
 }
