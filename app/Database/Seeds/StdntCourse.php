@@ -52,6 +52,6 @@ class StdntCourse extends Seeder
 
         ];
         // Using Query Builder
-        $this->db->table('users')->insertBatch($data);
+        $this->db->table('stdnt_course')->insertBatch($data);
     }
 }
