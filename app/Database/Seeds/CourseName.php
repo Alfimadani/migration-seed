@@ -17,6 +17,6 @@ class CourseName extends Seeder
 
         ];
         // Using Query Builder
-        $this->db->table('users')->insertBatch($data);
+        $this->db->table('course_name')->insertBatch($data);
     }
 }
