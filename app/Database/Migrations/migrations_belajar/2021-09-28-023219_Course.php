@@ -22,11 +22,11 @@ class Course extends Migration
 
         ]);
         $this->forge->addKey('course_id', true);
-        $this->forge->createTable('course');
+        $this->forge->createTable('course_name');
     }
 
     public function down()
     {
-        $this->forge->dropTable('course');
+        $this->forge->dropTable('course_name');
     }
 }
